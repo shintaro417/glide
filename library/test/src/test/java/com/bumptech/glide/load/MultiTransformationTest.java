@@ -25,7 +25,6 @@ import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RuntimeEnvironment;
 
 @RunWith(JUnit4.class)
 @SuppressWarnings("unchecked")
@@ -43,7 +42,7 @@ public class MultiTransformationTest {
   public void setUp() {
     MockitoAnnotations.initMocks(this);
 
-    context = RuntimeEnvironment.application;
+    context = null;
 
     doAnswer(new Util.WriteDigest("first"))
         .when(first)

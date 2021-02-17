@@ -18,7 +18,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
-import org.robolectric.RuntimeEnvironment;
 
 @RunWith(JUnit4.class)
 public class UnitTransformationTest {
@@ -28,7 +27,7 @@ public class UnitTransformationTest {
 
   @Before
   public void setUp() {
-    app = RuntimeEnvironment.application;
+    app = null;
   }
 
   @Test
